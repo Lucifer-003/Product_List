@@ -1,38 +1,142 @@
-.App {
+/* App.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f7ff, #d1e3ff); /* Gradient background */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
   text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px; /* More rounded container */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container:hover {
+  transform: scale(1.01); /* Slight scaling effect on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.select-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+select,
+input {
+  padding: 15px;
+  border: 2px solid #ced4da;
+  border-radius: 10px; /* Rounded inputs */
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus,
+input:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+select {
+  flex: 1;
+  margin-right: 10px;
+}
+
+input {
+  flex: 2;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px; /* Increased gap for better spacing */
+}
+
+.product-card {
+  background: linear-gradient(135deg, #fff1f9, #e4e9ff); /* Gradient background for cards */
+  border: none;
+  border-radius: 20px; /* More rounded corners */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+
+.product-description {
+  color: #777;
+  font-size: 14px;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.loading-text,
+.error-text {
+  text-align: center;
+  color: #dc3545; /* Red for errors */
+  margin: 20px 0;
+}
+
+.load-more {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #007bff, #00aaff); /* Gradient button */
   color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.load-more:hover {
+  background: linear-gradient(135deg, #0056b3, #0078d7); /* Hover state */
+  transform: translateY(-3px); /* Hover lift */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-to-cart {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.add-to-cart:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
 }
